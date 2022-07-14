@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INNODATABRIDGE</title>
+  <link rel="icon" href="./images/favicon.ico">
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" media="( min-width:881px ) and ( max-width:1800px )" href="./css/table.css">
+  <link rel="stylesheet" media="( min-width:0px ) and ( max-width:880px )" href="./css/mobile.css">
+  <link rel="stylesheet" href="./css/flippingCards.css">
+  <link rel="stylesheet" href="./css/side_slide_menu.css">
+  <link rel="stylesheet" href="./css/popup.css">
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <!-- FONTAWESOME -->
+  <script src="https://kit.fontawesome.com/49069939a7.js" crossorigin="anonymous"></script>
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body>
+  <!-- 문의하기 modal -->
+  <div class="modal-bg" id="modal">
+    <div class="modal-inner">
+      <div class="modal-header" style="cursor: pointer;">
+        <p class="modal-title">문의하기</p>
+        <button class="close-btn pop-hide">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p class="suport_des">IDB는 스마트 팩토리, 스마트 팜, 스마트 시티에 분야에 있어 <br />전문적인 무료 IoT 컨설팅과 스마트 기술을 제안해 드리고 있습니다.
+          <br />여러분의
+          해결하고자 하는 문제점에 집중하여 최적의 적합한 솔루션 구축을 제공합니다.
+        </p>
+        <form class="cs_contact_form">
+          <label for="company_name">회사명</label>
+          <input type="text" id="company_name"><br />
+          
+          <label for="customer_role">직함</label>
+          <input type="text" id="customer_role"><br />
+
+          <label for="customer_name" maxlength='10'>이름</label>
+          <input type="text" id="customer_name"><br />
+
+          <label for="tel">연락처</label>
+          <input type="text" id="tel"><br />
+
+          <label for="user_mail">이메일</label>
+          <input type="text" id="user_mail"><br />
+
+          <label for="types">문의 유형</label>
+          <select name="types" id="types" class="contact-select">
+            <option value="제품문의">제품문의</option>
+            <option value="솔루션문의">솔루션문의</option>
+            <option value="소개문의">소개문의</option>
+            <option value="파트너문의">파트너문의</option>
+            <option value="기타">기타</option>
+          </select><br />
+
+          <label for="user_text">문의 내용</label>
+          <input type="text" id="user_text"><br />
+          <div class="chbox-wrap">
+            <input type="checkbox" id="check1"></input><label for="check1" class="check"> 아이디비의 이용약관에
+              동의합니다.(필수)</label><br />
+            <input type="checkbox" id="check2"></input><label for="check2" class="check"> 개인정보 수집이용에
+              동의합니다.(필수)</label><br />
+            <input type="checkbox" id="check3"></input><label for="check3" class="check"> 만 14세 이상입니다.(필수)</label><br />
+            <input type="checkbox" id="check4"></input><label for="check4" class="check"> 마케팅 정보 수신에 동의합니다.(선택)</label>
+          </div>
+          <button class="cs_suport_btn" id="submitBtn" type="submit">제출</button>
+        </form>
+        <div style="clear: both;"></div>
+      </div>
+    </div>
+  </div>
+  <!-- 문의하기 끝 -->
+  <div class="body-container">
+  <!-- MOBILE NAV -->
+  <div class="nav-m">
+    <a href="#" class="close hide-btn"></a>
+    <!-- <button type="button" class="close hide-btn">X</button> -->
+    <div class="dep1-m">
+      <h2>About Us</h2>
+      <h2>Solution</h2>
+      <h2>Use Cases</h2>
+      <h2>Contact</h2>
+      <h2>Reference Room</h2>
+      <div class="dep2-m">
+        <ul>
+          <li><a href="#">비전</a></li>
+          <span style="line-height:50%"><br></span>
+          <li><a href="#">사업소개</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">모니터링 솔루션</a></li>
+          <span style="line-height:50%"><br></span>
+          <li><a href="#">AI 분석 솔루션</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">기사안</a></li>
+          <span style="line-height:50%"><br></span>
+          <li><a href="#">기술 적용 사례 글</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">파트너 모집</a></li>
+          <span style="line-height:50%"><br></span>
+          <li><a href="#">연락처</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">브로셔</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="sub_dep">
+      <a class="pop-show">CONTACT US</a>
+      <a href="#">FAQ</a>
+    </div>
+  </div>
+  <!-- MOBILE NAV 끝 -->
+  <!-- NAV -->
+  <header>
+    <div id="overlay"></div>
+
+    <div class="left">
+      <h1 class="navop"><a href="#"></a></h1>
+      <a href="#" class="all show-btn"></a>
+      <!-- display: none 상태 -->
+      <div class="nav">
+        <h2>Menu</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="dep1">About Us</a> <!-- ------------------------------------(회사소개) -->
+              <ul class="dep2">
+                <li><a href="#">비전</a></li>
+                <span style="line-height:50%"><br></span>
+                <li><a href="#">사업소개</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dep1">Solution</a> <!-- ------------------------------------(솔루션) -->
+              <ul class="dep2 rightErr">
+                <li><a href="#">모니터링 솔루션</a></li>
+                <span style="line-height:50%"><br></span>
+                <li><a href="#">AI 분석 솔루션</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dep1">Use Cases</a> <!-- ------------------------------------(활용사례) -->
+              <ul class="dep2">
+                <li><a href="#">기사안</a></li>
+                <span style="line-height:50%"><br></span>
+                <li><a href="#">기술 적용 사례 글</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dep1">Contact</a> <!-- ------------------------------------(연락처) -->
+              <ul class="dep2 rightErr">
+                <li><a href="#">파트너 모집</a></li>
+                <span style="line-height:50%"><br></span>
+                <li><a href="#">연락처</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#" class="dep1">Reference Room</a> <!-- ------------------------------------(자료실) -->
+              <ul class="dep2 rightErr">
+                <li><a href="#" class="brochure">브로셔</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+    </div>
+
+    <ul style="z-index: 9999;">
+      <li><a class="con pop-show">CONTACT US</a></li>
+      <li><a href="#" class="faq">FAQ</a></li>
+      <li><a href="#" class="join">Sign In</a></li>
+      <li><a href="#" class="join-m"></a></li>
+    </ul>
+
+  </header>
+
+  <!-- MAIN VIDEO -->
+  <div class="video_blur" style="width: 100vw;">
+    <video class="main_video" src="./video/pexels.mp4" autoplay loop muted></video>
+  </div>
+  <!-- MAIN TITLE -->
+  <div class="main_title">
+    <p class="main_title_top">AIoT 패러다임의 중심</p>
+    <h2 class="main_title_bottom">스마트 팩토리 솔루션 전문 기업 아이디비(주)</h2>
+  </div>
+  <!-- MAIN SCROLL -->
+  <div class="scroll">
+    <p>scroll</p>
+  </div>
+
+  <!-- Stats -->
+  <section class="section_stats">
+    <div class="stats_content01">
+      <h2>
+        아이디비는 기획부터 구축까지 2개월만에<br>
+        완료하는 에디터 기반의 솔루션으로<br>
+        기업과 현장에 맞춤형 시스템을 빠르고 쉽게 구축하고 있습니다.<br>
+      </h2>
+      <img src="./images/T2V_img.png" alt="T2V">
+    </div>
+    <div class="stats_content02">
+      <img src="./images/Iot_img.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">IoT 데이터 수집</p>
+      <h2 data-aos="fade-up" data-aos-duration="1100" data-aos-offset="200">
+        IoT 모듈, 펌웨어, 클라우드 기반 IoT 플랫폼 및<br> 모니터링 단에 이르는 End-To-End 솔루션을 제공하여<br> 전반적인 IoT 산업분야에 적용
+      </h2>
+    </div>
+    <div class="stats_content03">
+      <img src="./images/AI_img.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">AI 분석</p>
+      <h2 data-aos="fade-up" data-aos-duration="1100" data-aos-offset="200">
+        검증된 AI 행기술을 통해 설비 고장 사전 예측<br> * 원인 파악 <br>* 설명 가능한 모형 설계 <br>*
+        최신 모델 해석 기술을 생산 공정에 적용 및 최적화
+      </h2 data-aos="fade-up" data-aos-duration="3000" data-aos-offset="400">
+    </div>
+    <div class="stats_content04">
+      <img src="./images/digitalTwin_img.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">디지털 트윈</p>
+      <h2 data-aos="fade-up" data-aos-duration="1100" data-aos-offset="200">
+        AI융합기술을 적용한 디지털 트윈형 통합 모니터링<br> 시스템을 구축하여 직관적인 시각화와 정확한 의사<br>결정이 가능한 스마트 팩토리 표준 모델 제시
+
+    </div>
+    <div class="stats_content05">
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Solution</p>
+      <p id='coFff' data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300"><span
+          style="color: #24C0EB;">아이디비</span>의 7가지 솔루션을 확인해보세요.</p>
+    </div>
+  </section>
+  <!-- content06 wrapper 밑에 있음 -->
+
+  <!-- solution -->
+
+  <!-- Flipping Cards -->
+  <div class="wrapper">
+    <div class="cols">
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution1.png)">
+
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">실시간 기반 설비 모니터링</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">실시간 설비 상태 진단하여 설비 가동률을 증가시켜 생산성 향상, 설비수명은 늘리고, 설비 관리비용 및 생산원가를 절감할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution2.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">실시간 기반 환경 안전 모니터링</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">신속한 생산, 작업 환경변화 대응으로 돌발변수를 최소화하여, 사고 및 불량을 줄일 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution3.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">실시간 기반 공정 품질 모니터링</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">실시간 생산 중 공정 품질관리를 함으로써 불량을 조기에 발견하고 생산 품질 향상 및 품질관리 비용을 절감할 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution4.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">AI 기반의 최적의 공정 조건 예측 시스템
+</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">‘성상 정보 예측＇모델을 이용하여 공정 정보를 활용한 효과적인 운전 조건을 AI 기반으로 분석하여 제시합니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution5.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">AI 기반의 설비 예지 보전 시스템</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">공정 설비의 센서 데이터를 기반으로 다양한 통계, 머신러닝, 딥러닝 모델링을 통해 사전에 고장을 예측하고, 설비 고장 원인을 진단합니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution6.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">AI 기반의 성상 정보 예측 시스템</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">현장에서 필요하지만 계측이 어려운 공정 데이터를 실시간으로 계측하고 공정내에서 쉽게 계측 가능한 정보를 분석 예측하여 현장업무를 보다 정밀하고 효율적으로 할 수 있게 합니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+      <a href="#" class="col">
+        <div class="container">
+          <div class="front btn_open" style="background-image: url(./images/solution7.png)">
+            <div class="inner">
+              <p style="font-size: 19px; font-family: 'GmarketSansLight'; letter-spacing: -1px;">AI 기반의 이상 패턴 분석 시스템</p>
+              <span style="font-size: 20px; font-family: 'GmarketSansLight';">바로가기</span>
+            </div>
+          </div>
+          <div class="back">
+            <div class="inner">
+              <p style="font-size: 17px; font-family: 'GmarketSansLight';">설비에 대한 수집된 데이터를 기반으로 비 이상적인 패턴에 대한 상태를 파악하고 Golden 타임내 진단한 문제점을 조치하여 설비 상태 가용성을 증가 시킬 수 있습니다.</p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="stats_content06">
+    <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Consultation Procedure</p>
+    <div class="consultation">
+      <h1>지금 바로 시작하세요.</h1>
+      <div class="consultation_container">
+        <div class="consultation_content01"><span>1</span>
+          <h3>상담 및 문의 접수</h3>
+          <h4>고객 요청사항 파악 및 탐색</h4>
+        </div>
+        <div class="consultation_content02"><span>2</span>
+          <h3>현장 방문</h3>
+          <h4>현장을 방문하여 현장구조 및 모니터링 구조 파악</h4>
+        </div>
+        <div class="consultation_content03"><span>3</span>
+          <h3>맞춤형 컨설팅 진행</h3>
+          <h4>합리적인 가격에 가장 적합한 맞춤형 컨설팅 제안</>
+        </div>
+        <div class="consultation_content04"><span>4</span>
+          <h3>운용 및 교육</h3>
+          <h4>모니터링 설치와 전문 운용 교육 진행</h4>
+        </div>
+        <a class="consultation_contact pop-show" style="cursor: pointer;">
+          <h3 style="cursor: pointer;">문의하기</h3>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer_con1">
+      <h2>아이디비㈜ | IDB Inc.</h2>
+      <p>Powered by IDB Inc.™, IDB Inc. All rights reserved 2020 in Korea</p>
+      <div>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      </div>
+    </div>
+    <div class="footer_con2">
+      <div class="footer_con2_item01">
+        <h3>About Us</h3><br>
+        <a href="#">비전</a><br>
+        <a href="#">사업소개</a>
+      </div>
+      <div class="footer_con2_item02">
+        <h3>Solution</h3><br>
+        <a href="#">모니터링 솔루션</a><br>
+        <a href="#">AI 분석 솔루션</a>
+      </div>
+    </div>
+    <div class="footer_con3">
+      <div class="footer_con3_item01">
+        <h3>Use Cases</h3><br>
+        <a href="#">기사안</a><br>
+        <a href="#">기술 적용 사례 글</a>
+      </div>
+      <div class="footer_con3_item02">
+        <h3>Contact</h3><br>
+        <a href="#">파트너 모집</a><br>
+        <a href="#">연락처</a>
+      </div>
+    </div>
+    <div class="footer_con4">
+      <div class="footer_con4_item01">
+        <h3>Reference Room</h3><br>
+        <a href="#">브로셔</a>
+      </div>
+
+      <div class="footer_con4_item02">
+        <div class="location-wrap">
+          <i class="fa-solid fa-location-dot"></i>
+          <p class="location-p">112, 12th Floor, 216<br>
+            <span class="location-span1">Shinwoong Tower Tehran-ro,</span><br>
+            <span class="location-span2">Gangnam-gu, Seoul</span><br>
+          </p>
+        </div>
+        <div class="tel-wrap">
+          <i class="fa-solid fa-phone"></i>
+          <a href="tel:+07043887030" class="tel-link">Tel. 070 4388 7030</a><br>
+          <a href="tel:+05044777030" class="fax-link">Fax. 0504 477 7030</a><br>
+        </div>
+        <div class="email-wrap">
+          <i class="fa-solid fa-envelope"></i>
+          <a href="mailto:bkmin@idb.ai" class="email-link">Email. bkmin@idb.ai</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+</div>
+</body>
+<script src="./js/index.js"></script>
+</html>
