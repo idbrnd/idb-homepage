@@ -101,11 +101,7 @@ const verification = (e) => {
       .then(response => response.json())
       .then((data) => {
         console.log(data)
-        // if (data.status == 200) {
-        //   console.log(data)
-        // } else {
-        //   console.log("400")
-        // }
+        
       })
       .catch((error) => {
         console.log(error)
