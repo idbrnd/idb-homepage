@@ -15,7 +15,6 @@
 }
 /* html, body{
   width:100%;
-  overflow-x: hidden;
 } */
 * {
   margin: 0;
@@ -52,7 +51,7 @@ header a {
   color: #fff;
 }
 header h1 {
-  float: left;
+  /* float: left; */
   position: fixed;
   z-index: 9999;
 }
@@ -88,7 +87,7 @@ header nav .dep1::before {
 header nav .dep1:hover::before {
   width: 100%;
 }
-
+/* navbar 스크롤시 모양  */
 .navbg {
   position: fixed;
   width: 100%;
@@ -405,7 +404,7 @@ header nav > ul .dep2 li a:hover {
 .section_stats > .stats_content01 img {
   display: block;
   width: 50vw;
-  min-width: 400px;
+  /* min-width: 400px; */
   max-width: 700px;
   height: 50%;
   position: absolute;
@@ -819,11 +818,11 @@ Flipping Cards BG */
 
 .consultation h1 {
   width: 60%;
-  height: 190px;
+  height: 170px;
   border-bottom: 3px solid #fff;
   position: absolute;
   text-align: center;
-  top: 10%;
+  top: -25%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 80px;
@@ -982,9 +981,10 @@ footer {
   flex-direction: row;
 }
 .footer_con1 {
-  width: 500px;
+  width: 80%;
+  max-width: 500px;
   height: 200px;
-  margin: 40px 0 0 30px;
+  margin: 80px 0 30px 30px;
   line-height: 40px;
 }
 .footer_con2 {

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INNODATABRIDGE</title>
+  <title>IDB</title>
   <link rel="icon" href="./images/favicon.ico">
   <!-- CSS -->
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" media="( min-width:881px ) and ( max-width:1800px )" href="./css/table.css">
+  <link rel="stylesheet" media="( min-width:881px ) and ( max-width:1800px )" href="./css/tablet.css">
   <link rel="stylesheet" media="( min-width:0px ) and ( max-width:880px )" href="./css/mobile.css">
   <link rel="stylesheet" href="./css/flippingCards.css">
   <link rel="stylesheet" href="./css/side_slide_menu.css">
@@ -79,11 +79,14 @@
     </div>
   </div>
   <!-- 문의하기 끝 -->
+
+
   <div class="body-container">
+
+
   <!-- MOBILE NAV -->
   <div class="nav-m">
     <a href="#" class="close hide-btn"></a>
-    <!-- <button type="button" class="close hide-btn">X</button> -->
     <div class="dep1-m">
       <h2>About Us</h2>
       <h2>Solution</h2>
@@ -112,7 +115,7 @@
           <li><a href="#">연락처</a></li>
         </ul>
         <ul>
-          <li><a href="#">브로셔</a></li>
+          <li><a href="#" class="brochure">브로셔</a></li>
         </ul>
       </div>
     </div>
@@ -122,13 +125,15 @@
     </div>
   </div>
   <!-- MOBILE NAV 끝 -->
+
+  
   <!-- NAV -->
   <header>
     <div id="overlay"></div>
 
     <div class="left">
       <h1 class="navop"><a href="#"></a></h1>
-      <a href="#" class="all show-btn"></a>
+      <a href="#" class="all show-btn"></a> <!-- 햄버거 버튼 -->
       <!-- display: none 상태 -->
       <div class="nav">
         <h2>Menu</h2>
@@ -184,7 +189,7 @@
       <li><a href="#" class="join">Sign In</a></li>
       <li><a href="#" class="join-m"></a></li>
     </ul>
-
+    <!-- <div style="float: none; clear: both;"></div> -->
   </header>
 
   <!-- MAIN VIDEO -->
@@ -211,6 +216,8 @@
       </h2>
       <img src="./images/T2V_img.png" alt="T2V">
     </div>
+
+    <!-- aos 모바일 사이즈 수정 -->
     <div class="stats_content02">
       <img src="./images/Iot_img.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
       <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">IoT 데이터 수집</p>
@@ -218,6 +225,8 @@
         IoT 모듈, 펌웨어, 클라우드 기반 IoT 플랫폼 및<br> 모니터링 단에 이르는 End-To-End 솔루션을 제공하여<br> 전반적인 IoT 산업분야에 적용
       </h2>
     </div>
+
+
     <div class="stats_content03">
       <img src="./images/AI_img.png" data-aos="fade-up" data-aos-duration="500" data-aos-offset="200">
       <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="200">AI 분석</p>
@@ -234,8 +243,8 @@
 
     </div>
     <div class="stats_content05">
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Solution</p>
-      <p id='coFff' data-aos="fade-up" data-aos-duration="1500" data-aos-offset="300"><span
+      <p data-aos="fade-up" data-aos-duration="800" data-aos-offset="300">Solution</p>
+      <p id='coFff' data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300"><span
           style="color: #24C0EB;">아이디비</span>의 7가지 솔루션을 확인해보세요.</p>
     </div>
   </section>
@@ -358,8 +367,8 @@
   <div class="stats_content06">
     <p data-aos="fade-up" data-aos-duration="1000" data-aos-offset="300">Consultation Procedure</p>
     <div class="consultation">
-      <h1>지금 바로 시작하세요.</h1>
       <div class="consultation_container">
+        <h1>지금 바로 시작하세요.</h1>
         <div class="consultation_content01"><span>1</span>
           <h3>상담 및 문의 접수</h3>
           <h4>고객 요청사항 파악 및 탐색</h4>
