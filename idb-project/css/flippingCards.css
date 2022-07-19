@@ -177,10 +177,10 @@
         width: calc(50% - 2rem);
     }
     .cols { margin-top: 0px; }
-    .consultation { height: 500px; }
-    .stats_content06 { height: 1000px; background: transparent; }
+    .consultation { height: 350px; }
+    .stats_content06 { background: transparent; }
     .stats_content06 p { display: none; }
-    footer { bottom: -4750px; }
+    footer { bottom: -4850px; }
 }
 
 @media screen and (max-width: 32rem) {

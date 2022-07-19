@@ -99,6 +99,7 @@
 }
 
 /*~ 태블릿, 모바일 사이즈에서 사이즈 조절 ~*/
+/* 가장 보편적인 1200px / 992px / 768px / 576px로 구성 */
 @media screen and (max-width: 1200px) {
 	.modal-inner { width: 700px; margin-top: 20px; }
 	.suport_des { font-size: 16px; }
@@ -124,3 +125,32 @@
 		height: 40px;
 	}
 }
+
+@media screen and (max-width: 576px) {
+	.modal-inner { width: 400px; overflow-y: scroll;}
+  .modal-header { height: 30px; }
+  .modal-title { font-size: 13px; }
+	.suport_des { font-size: 10px; }
+	.modal-body form input[type="text"] {
+		width: 100%;
+    height: 16px;
+		font-size: 11px;
+	}
+  .modal-body form select {
+    width: 100%;
+    height: 22px;
+    font-size: 11px;
+    padding: 0;
+  }
+	.modal-body form label {
+		font-size: 11px;
+	}
+	.cs_suport_btn {
+		margin: 30px 70px 0;
+		height: 30px;
+    font-size: 16px;
+    display: block;
+
+	}
+}
+
