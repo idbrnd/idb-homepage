@@ -13,9 +13,7 @@
   font-weight: normal;
   font-style: normal;
 }
-/* html, body{
-  width:100%;
-} */
+
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +49,6 @@ header a {
   color: #fff;
 }
 header h1 {
-  /* float: left; */
   position: fixed;
   z-index: 9999;
 }
@@ -70,7 +67,7 @@ header nav a {
   line-height: 50px;
   font-size: 16px;
 }
-/* nav바 */
+/* nav */
 header nav .dep1 {
   margin-top: 46px;
 }
@@ -220,26 +217,18 @@ header nav > ul .dep2 li a:hover {
   height: 100vh;
 }
 
-/* <!-- MOBILE NAV -->
-
-  <div class="nav-m">
-    <div class="menu-m"><img src="./IDB-images/header-img.png"></div>
-    <div class="logo-m"><img src="./IDB-images/header-img.png"></div>
-    <div class="sign-m"><img src="./IDB-images/header-img.png"></div>
-    <div class="slide-menu"></div>
-  </div> */
 
 .nav-m {
-  background: url(/images/header-img.png);
+  background: url('../images/header-img.png');
 }
 .logo-m {
-  background: url(/images/header-img.png);
+  background: url('../images/header-img.png');
 }
 .sign-m {
-  background: url(/images/header-img.png);
+  background: url('../images/header-img.png');
 }
 
-/* ==================================================================================================================================== MAIN */
+/* =============== MAIN =============== */
 
 .main_title {
   position: absolute;
@@ -291,8 +280,7 @@ header nav > ul .dep2 li a:hover {
   }
 }
 
-/* ==================================================================================================================================== SCROLL */
-
+/* ============= SCROLL =========== */
 .scroll {
   position: absolute;
   height: 60px;
@@ -370,8 +358,8 @@ header nav > ul .dep2 li a:hover {
   }
 }
 
-/* ==================================================================================================================================== SEC-STATS */
-/* ============= (1) stats */
+/* ============= SEC-STATS ============== */
+/* ============= stats(1) =============== */
 
 .section_stats {
   position: relative;
@@ -415,7 +403,7 @@ header nav > ul .dep2 li a:hover {
   display: block;
 }
 
-/* ============= (2) stats */
+/* ============= stats(2) =========== */
 
 .section_stats > .stats_content02 {
   position: relative;
@@ -459,7 +447,7 @@ header nav > ul .dep2 li a:hover {
   margin-right: 200px;
 }
 
-/* ============= (3) stats */
+/* ============= stats(3) ===============  */
 
 .section_stats > .stats_content03 {
   position: relative;
@@ -468,7 +456,6 @@ header nav > ul .dep2 li a:hover {
   overflow: hidden;
   margin-top: 120px;
 }
-
 .stats_content03 img {
   position: absolute;
   right: 0;
@@ -502,7 +489,7 @@ header nav > ul .dep2 li a:hover {
   margin-left: 200px;
 }
 
-/* ============= (4) stats */
+/* ============= stats(4) ============== */
 
 .section_stats > .stats_content04 {
   position: relative;
@@ -511,7 +498,6 @@ header nav > ul .dep2 li a:hover {
   overflow: hidden;
   margin-top: 120px;
 }
-
 .stats_content04 img {
   position: absolute;
   left: 0;
@@ -545,7 +531,7 @@ header nav > ul .dep2 li a:hover {
   margin-right: 200px;
 }
 
-/* ============= (5) stats */
+/* ============= stats(5) ============= */
 
 .section_stats > .stats_content05 {
   position: relative;
@@ -554,11 +540,7 @@ header nav > ul .dep2 li a:hover {
   margin: 150px auto 0;
   height: 140px;
   overflow: hidden;
-  /* background: #eee; */
-  /* margin-left: 27px; */
 }
-
-
 .stats_content05 p {
   font-size: 40px;
   font-weight: bold;
@@ -599,7 +581,8 @@ header nav > ul .dep2 li a:hover {
   margin-left: 200px;
 }
 
-/* ============= (6) stats */
+
+/* ============= stats(6) ===============  */
 /* 노란색부분 */
 .stats_content06 {
   position: absolute;
@@ -623,87 +606,11 @@ header nav > ul .dep2 li a:hover {
   z-index: 99;
 }
 
-/* ====================================================================================================================================
-Flipping Cards BG */
-/* 
-.background {
-  position: absolute;
-  width: 100%;
-  height: 1500px;
-  overflow: hidden;
-  margin: 1100px 0 0 400px;
-}
-.background .rotate {
-  position: absolute;
-  top: calc(50% - 200px);
-  left: calc(50% - 200px);
-  width: 1200px;
-  height: 800px;
-  transform-style: preserve-3d;
-  animation: rotate 20s linear infinite;
-  zoom: 4;
-}
-@keyframes rotate {
-  0% {
-    transform: rotateX(0deg) rotateY(0deg);
-  }
-  100% {
-    transform: rotateX(360deg) rotateY(360deg);
-  }
-}
-.background .rotate .sphere {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-}
-.background .rotate .sphere:nth-child(2) {
-  transform: rotate(90deg);
-}
-.background .rotate .sphere:nth-child(3) {
-  transform: rotate(45deg);
-}
-.background .rotate .sphere:nth-child(4) {
-  transform: rotate(-45deg);
-}
-.background .rotate .sphere span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  background: radial-gradient(#000, #0c3e8a);
-  border-radius: 50%;
-}
-.background .rotate .sphere span:nth-child(1) {
-  transform: rotateY(0deg);
-}
-.background .rotate .sphere span:nth-child(2) {
-  transform: rotateY(30deg);
-}
-.background .rotate .sphere span:nth-child(3) {
-  transform: rotateY(60deg);
-}
-.background .rotate .sphere span:nth-child(4) {
-  transform: rotateY(90deg);
-}
-.background .rotate .sphere span:nth-child(5) {
-  transform: rotateY(120deg);
-}
-.background .rotate .sphere span:nth-child(6) {
-  transform: rotateY(150deg);
-} */
-
-/* ==================================================================================================================================== CARD-HOVER */
+/* ================ CARD-HOVER =============== */
 
 .wrap {
   padding: 10px;
 }
-
-
 .btn_open {
   font-weight: bold;
   margin: 5px;
@@ -736,8 +643,8 @@ Flipping Cards BG */
   font-size: 15px;
 }
 
-/* ==================================================================================================================================== Consultation */
 
+/* ===================== Consultation ================== */
 .consultation {
   width: 100%;
   height: 1500px;
@@ -971,7 +878,7 @@ Flipping Cards BG */
   background: #252525;
 }
 
-/* ====================================================================================================================================== Footer */
+/* =================== Footer ===================== */
 
 footer {
   position: absolute;
@@ -1186,9 +1093,6 @@ footer {
   line-height: 25px;
   margin-left: 30px;
 }
-
-
-
 
 .footer_con2 > .footer_con2_item01 a:hover {
   color: #6966fa;

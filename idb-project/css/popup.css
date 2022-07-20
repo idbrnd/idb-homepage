@@ -2,7 +2,6 @@
 
 .modal-bg {
   position: fixed;
-  /* transform: translate(80%,0%); */
   left: 0px;
   top: 0px;
   /* margin: 100px auto; */
@@ -11,7 +10,6 @@
   height: 100%;
   display: none;
   color: #fff;
-	/* background: #000; */
 }
 
 .modal-inner {
@@ -89,9 +87,6 @@
   font-size: 30px;
   width: 120px;
   height: 80px;
-  /* position: absolute;
-  bottom: 20px;
-  right: 65px; */
   border-radius: 5px;
 	float: right;
 	margin: 20px 0px -10px;
@@ -99,7 +94,6 @@
 }
 
 /*~ 태블릿, 모바일 사이즈에서 사이즈 조절 ~*/
-/* 가장 보편적인 1200px / 992px / 768px / 576px로 구성 */
 @media screen and (max-width: 1200px) {
 	.modal-inner { width: 700px; margin-top: 20px; }
 	.suport_des { font-size: 16px; }
@@ -127,7 +121,7 @@
 }
 
 @media screen and (max-width: 576px) {
-	.modal-inner { width: 400px; overflow-y: scroll;}
+	.modal-inner { width: 100%; overflow-y: scroll;}
   .modal-header { height: 30px; }
   .modal-title { font-size: 13px; }
 	.suport_des { font-size: 10px; }
@@ -150,7 +144,6 @@
 		height: 30px;
     font-size: 16px;
     display: block;
-
 	}
 }
 
