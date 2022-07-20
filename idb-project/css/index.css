@@ -256,7 +256,7 @@ header nav > ul .dep2 li a:hover {
   font-family: "GmarketSansLight";
   animation: fadeUpP 1.5s;
   animation-fill-mode: forwards;
-  animation-delay: 1.8s;
+  animation-delay: 1.3s;
   opacity: 0;
 }
 .main_title_bottom {
@@ -273,7 +273,7 @@ header nav > ul .dep2 li a:hover {
 @keyframes fadeUpP {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
@@ -376,7 +376,7 @@ header nav > ul .dep2 li a:hover {
 .section_stats {
   position: relative;
   width: 100vw;
-  height: 1500px;
+  /* height: 1500px; */
 }
 
 .section_stats > .stats_content01 {
@@ -423,13 +423,15 @@ header nav > ul .dep2 li a:hover {
   height: 500px;
   overflow: hidden;
   margin-top: 250px;
+  /* z-index: 10000; */
 }
 
 .stats_content02 img {
   width: 700px;
   margin-left: 200px;
+  z-index: 11000;
 }
-.stats_content02 p {
+.stats_content02 h2 {
   font-size: 40px;
   font-weight: bold;
   color: rgb(129, 148, 253);
@@ -437,11 +439,12 @@ header nav > ul .dep2 li a:hover {
   font-family: "GmarketSansBold";
   text-align: center;
   position: absolute;
-  top: 0%;
-  right: 0;
-  margin-right: 200px;
+  top: 0;
+  right: 8%;
+  margin: 50px 200px 0 0;
+  z-index: 11000;
 }
-.stats_content02 h2 {
+.stats_content02 p {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -467,11 +470,12 @@ header nav > ul .dep2 li a:hover {
 }
 
 .stats_content03 img {
-  float: right;
+  position: absolute;
+  right: 0;
   width: 700px;
   margin-right: 200px;
 }
-.stats_content03 p {
+.stats_content03 h2 {
   font-size: 40px;
   font-weight: bold;
   color: rgb(129, 148, 253);
@@ -479,11 +483,11 @@ header nav > ul .dep2 li a:hover {
   font-family: "GmarketSansBold";
   text-align: center;
   position: absolute;
-  top: 0%;
-  left: 0;
+  top: 0;
+  left: 10%;
   margin-left: 200px;
 }
-.stats_content03 h2 {
+.stats_content03 p {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -492,7 +496,7 @@ header nav > ul .dep2 li a:hover {
   line-height: 50px;
   text-align: left;
   position: absolute;
-  top: 30%;
+  top: 20%;
   left: 0;
   transform: translateY(-50%);
   margin-left: 200px;
@@ -509,10 +513,12 @@ header nav > ul .dep2 li a:hover {
 }
 
 .stats_content04 img {
+  position: absolute;
+  left: 0;
   width: 700px;
   margin-left: 200px;
 }
-.stats_content04 p {
+.stats_content04 h2 {
   font-size: 40px;
   font-weight: bold;
   color: rgb(129, 148, 253);
@@ -520,11 +526,11 @@ header nav > ul .dep2 li a:hover {
   font-family: "GmarketSansBold";
   text-align: center;
   position: absolute;
-  top: 0%;
-  right: 0;
+  top: 10%;
+  right: 8%;
   margin-right: 200px;
 }
-.stats_content04 h2 {
+.stats_content04 p {
   font-size: 25px;
   font-weight: bold;
   color: #fff;
@@ -543,18 +549,16 @@ header nav > ul .dep2 li a:hover {
 
 .section_stats > .stats_content05 {
   position: relative;
-  width: 100%;
-  height: 500px;
+  width: 80%;
+  display: block;
+  margin: 150px auto 0;
+  height: 140px;
   overflow: hidden;
-  margin-top: 150px;
-  margin-left: 27px;
+  /* background: #eee; */
+  /* margin-left: 27px; */
 }
 
-.stats_content05 img {
-  float: right;
-  border-radius: 50%;
-  margin-right: 200px;
-}
+
 .stats_content05 p {
   font-size: 40px;
   font-weight: bold;
@@ -565,7 +569,7 @@ header nav > ul .dep2 li a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  margin-left: 210px;
+  /* margin-left: 200px; */
 }
 .stats_content05 #coFff {
   margin-top: 70px;
@@ -576,9 +580,9 @@ header nav > ul .dep2 li a:hover {
   font-family: "GmarketSansBold";
   text-align: center;
   position: absolute;
-  top: 0%;
+  top: 0;
   left: 0;
-  margin-left: 210px;
+  /* margin-left: 200px; */
 }
 .stats_content05 h2 {
   font-size: 25px;
@@ -596,7 +600,7 @@ header nav > ul .dep2 li a:hover {
 }
 
 /* ============= (6) stats */
-
+/* 노란색부분 */
 .stats_content06 {
   position: absolute;
   width: 100%;
@@ -615,13 +619,13 @@ header nav > ul .dep2 li a:hover {
   position: absolute;
   top: 10%;
   left: 0;
-  margin: 110px 0 0 650px;
+  margin: 110px 0 0 680px;
   z-index: 99;
 }
 
 /* ====================================================================================================================================
 Flipping Cards BG */
-
+/* 
 .background {
   position: absolute;
   width: 100%;
@@ -691,7 +695,7 @@ Flipping Cards BG */
 }
 .background .rotate .sphere span:nth-child(6) {
   transform: rotateY(150deg);
-}
+} */
 
 /* ==================================================================================================================================== CARD-HOVER */
 

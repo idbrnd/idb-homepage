@@ -29,6 +29,9 @@ nav { display: none; }
 .main_title_bottom { font-size: 14px; font-weight: bold; color: #FFF; line-height: 50px; letter-spacing: -3px; font-family: 'GmarketSansBold'; }
 
 /** page 2 **/
+.section_stats {
+  /* height: 2000px; */
+}
 /* ============= (1) stats */
 .section_stats > .stats_content01 { position: relative; width: 100vw; height: 500px; overflow: hidden; }
 
@@ -43,38 +46,64 @@ nav { display: none; }
   left: 0;
   right: 0;
 }
+/** aos **/
 /* ============= (2) stats */
 
-.section_stats > .stats_content02 { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 100px; }
+.section_stats > .stats_content02 { position: relative; width: 100%; overflow: hidden; margin-top: 50px; }
 /* .section_stats > .stats_content02 { position: relative; width: 90%; height: 200px; overflow: hidden; margin-top: 100px; } */
 
-.stats_content02 img { height: 350px; float: left}
-.stats_content02 p { font-size: 20px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; float: right; }
-.stats_content02 h2 { width: 100%; font-size: 15px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: 8%; left: 30px; transform: translateY(-50%); margin-top: 30px; float: right; }
+.stats_content02 img { width: 80%; max-width: 700px ; display: block; margin: 40px auto 0; }
+.stats_content02 h2 { font-size: 26px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; position: absolute; top: -20%; left: 0; right: 0; text-align: center; margin: 0; }
+.stats_content02 p { width: 100%; font-size: 18px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: -15%; left: 0px; right: 0; transform: translateY(-50%); margin: 30px 0 0 0; display: flex; justify-content: center;}
+
+/* AOS 모바일 사이즈에서 적용되지 않는 문제점을 해결하기 위한 임시방법 */
+#statsContent02 img, #statsContent02 p, #statsContent02 h2 {
+  opacity: 1;
+}
+
 
 /* ============= (3) stats */
 
-.section_stats > .stats_content03 { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 100px; }
+.section_stats > .stats_content03 { position: relative; width: 100%; height: 650px; overflow: hidden; margin-top: 50px; background: transparent;}
 
-.stats_content03 img { height: 400px; margin-right: -110px;}
-.stats_content03 p { font-size: 20px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: -94px; }
-.stats_content03 h2 { width: 100%; font-size: 15px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: 8%; left: -166px; transform: translateY(-50%); margin-top: 30px; }
+.stats_content03 img { width: 80%; max-width: 700px; display: block; margin: 40px auto 0; float: none; position: absolute; bottom: 120px; left: 0; right: 0;}
+.stats_content03 h2 { font-size: 26px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; position: absolute; top: 3%; left: 0; right: 0; margin: 0; text-align: center; }
+.stats_content03 p { width: 100%; font-size: 18px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: 7%; left: 0; right: 0; transform: translateY(-50%); margin: 30px 0 0 0; display: flex; justify-content: center;}
+
+#statsContent03 img, #statsContent03 p, #statsContent03 h2 {
+  opacity: 1;
+}
 
 /* ============= (4) stats */
 
-.section_stats > .stats_content04 { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 100px; }
+.section_stats > .stats_content04 { position: relative; width: 100%; height: 650px; overflow: hidden; margin-top: 50px; background: transparent;}
 
-.stats_content04 img {  height: 300px; margin-left: 200px; }
-.stats_content04 p { font-size: 20px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; }
-.stats_content04 h2 { width: 100%; font-size: 15px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: 8%; left: 30px; transform: translateY(-50%); margin-top: 30px; }
+.stats_content04 img { width: 80%; max-width: 700px; display: block; margin: 40px auto 0; float: none; position: absolute; bottom: 120px; left: 0; right: 0;}
+.stats_content04 h2 { font-size: 26px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; position: absolute; top: 5%; left: 0; right: 0; margin: 0; text-align: center; }
+.stats_content04 p { width: 100%; font-size: 18px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; line-height: 30px; text-align: left; position: absolute; top: 10%; left: 0; right: 0; transform: translateY(-50%); margin: 30px 0 0 0; display: flex; justify-content: center; }
+
+#statsContent04 img, #statsContent04 p, #statsContent04 h2 {
+  opacity: 1;
+}
 
 /* ============= (5) stats */
 
 
-.section_stats > .stats_content05 { position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 40px; margin-left: -30px; }
+.section_stats > .stats_content05 { 
+  width: 80%; display: block; margin: 0 auto; position: relative; height: 120px; overflow: hidden;
+  }
+  /* position: relative; width: 100%; height: 200px; overflow: hidden; margin-top: 40px; margin-left: -30px; background: transparent; */
+.stats_content05 p { font-size: 26px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; }
+.stats_content05 #coFff { margin-top: 70px; font-size: 18px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; }
 
-.stats_content05 p { font-size: 16px; font-weight: bold; color: rgb(129, 148, 253); letter-spacing: -1px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; margin-left: 50px; }
-.stats_content05 #coFff { margin-top: 30px; font-size: 14px; font-weight: bold; color: #FFF; letter-spacing: 0px; font-family: 'GmarketSansBold'; text-align: center; position: absolute; top: 0; left: 0; margin-left: 50px; }
+#statsContent05 > p:nth-child(1) {
+  opacity: 1;
+  top: -40%;
+}
+#statsContent05 > #coFff {
+  opacity: 1;
+  top: -70%;
+}
 
 .content_item { display: none; }
 
@@ -101,7 +130,7 @@ nav { display: none; }
 .background { display: none; }
 
 /* ============= Consultation */
-.consultation h1 { font-size: 24px; padding-top: 20px; height: 100px;}
+.consultation h1 { font-size: 20px; padding-top: 20px; height: 100px;}
 .consultation > .consultation_container > .consultation_contact {  left: 50%; transform: translateX(-50%); width: 85px; height: 85px; top: 580px; }
 .consultation > .consultation_container > .consultation_content01 { left: 30%; height: 85px; margin-left: 150px; }
 .consultation > .consultation_container > .consultation_content02 { left: 30%; height: 85px; margin-left: 150px; }
@@ -155,16 +184,7 @@ footer { bottom: -5100px; }
 
 .consultation>.consultation_container > .consultation_contact:hover { top: 83%; }
 
-@media screen and (max-width:1250px) {
-    .consultation > .consultation_container > .consultation_content01 h3 { font-size: 15px; margin: 18px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content02 h3 { font-size: 15px; margin: 18px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content03 h3 { font-size: 15px; margin: 18px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content04 h3 { font-size: 15px; margin: 18px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content01 h4 { font-size: 10px; margin: 45px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content02 h4 { font-size: 10px; margin: 45px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content03 h4 { font-size: 10px; margin: 45px 0 0 170px; }
-    .consultation > .consultation_container > .consultation_content04 h4 { font-size: 10px; margin: 45px 0 0 170px; }
-}
+
 
 @media screen and (max-width:1000px) {
     .consultation>.consultation_container>.consultation_content01 { width: 90%; margin-left: 0px; left: 50%; transform: translateX(-50%); }
@@ -218,11 +238,20 @@ footer { bottom: -5100px; }
     .footer_con4 > .footer_con4_item02  span { font-size: 13px;  margin-left: 25px;}
     .footer_con4 > .footer_con4_item02 { padding: 15px 0 0 35px; font-size: 13px; line-height: 15px; width: 80%; display: block; margin-left: auto; margin-right: auto;}
     .fax-link { margin-left: 26px; }
+    /* html:not(.no-js) [data-aos^=fade][data-aos^=fade] {
+      opacity: 1 !important;
+    } */
+    html:not(.no-js) [data-aos^=fade][data-aos^=fade].aos-animate {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
 }
 
 @media screen and (max-width:768px) { 
   footer { bottom: -5400px; } 
 }
+
 
 
 /* 모바일 사이즈 */
@@ -236,6 +265,34 @@ footer { bottom: -5100px; }
     font-family: 'GmarketSansBold'; 
   }
   .section_stats > .stats_content01 h2 { font-size: 12px; }
+
+  #statsContent02, #statsContent03, #statsContent04{
+    height: 350px;
+  }
+
+  .stats_content02 h2 { font-size: 20px; top: -30%; }
+  .stats_content02 p { font-size: 12px; line-height: 20px; top: -28%; }
+
+  .stats_content03 h2 { font-size: 20px; top: -40%; }
+  .stats_content03 p { font-size: 12px; line-height: 20px; top: -28%; }
+
+  .stats_content04 h2 { font-size: 20px; top: -30%; }
+  .stats_content04 p { font-size: 12px; line-height: 20px; top: -28%; }
+
+  .stats_content05 p { font-size: 20px; }
+  .stats_content05 #coFff { font-size: 12px; }
+
+  .consultation > .consultation_container > .consultation_content01 h3 { font-size: 16px; margin: 18px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content02 h3 { font-size: 16px; margin: 18px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content03 h3 { font-size: 16px; margin: 18px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content04 h3 { font-size: 16px; margin: 18px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content01 h4 { font-size: 11px; margin: 45px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content02 h4 { font-size: 11px; margin: 45px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content03 h4 { font-size: 11px; margin: 45px 0 0 150px; }
+  .consultation > .consultation_container > .consultation_content04 h4 { font-size: 11px; margin: 45px 0 0 150px; }
+
+
+  
 
 }
 
