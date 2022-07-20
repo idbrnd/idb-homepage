@@ -17,8 +17,6 @@ $('.hide-btn').click(function(){
   $('.nav-m').fadeOut()
 })
 
-// AOS JS
-AOS.init();
 
 // POPUP 버튼
 $('.pop-show').click(function(){
