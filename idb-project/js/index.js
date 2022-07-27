@@ -51,7 +51,8 @@ const verification = (e) => {
   // input 공백 감지
   if (companyName.value == "") {
     alert('회사 이름을 입력해주세요.')
-  } else if (customerRole.value == "") {
+  }
+  else if (customerRole.value == "") {
     alert('직함을 입력해주세요.')
   }
   else if (customerName.value == "") {
@@ -77,7 +78,7 @@ const verification = (e) => {
   }
   else {
 
-    const url = 'http://183.111.79.81:8007/docs';
+    const url = 'http://183.111.79.81:8007/api/contact';
     const data = {
       "company": companyName.value,
       "name": customerName.value,
