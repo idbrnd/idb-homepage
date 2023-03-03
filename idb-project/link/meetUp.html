@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--@ google fonts -->
+    <!--# (main.css 보다 먼저 등록하는 것이 바람직하다. 등록 후 css파일에서 font-family로 사용해야한다.) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <!--@ Material icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!--@ lodash cdn파일 연결하기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--@ gsap cdn파일 연결하기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js" integrity="sha512-VEBjfxWUOyzl0bAwh4gdLEaQyDYPvLrZql3pw1ifgb6fhEvZl9iDDehwHZ+dsMzA0Jfww8Xt7COSZuJ/slxc4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--@ gsap & ScrollToPlugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js" integrity="sha512-tQFq+nb/TSS648SDzWbSj0A67t4I1PFzR0U6Oi/yEYFyUbAIwg74SOCbr7t2X1Rn+iln7sYwfh8y+z7p0gddOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <link rel="stylesheet" href="../css/meetUp.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="../index.html" class="logo">
+            <img src="../images/logo.png" alt="IDB">
+        </a>
+        <ul class="nav-content">
+            <li><a href="javascript:void(0)" class="faq">FAQ</a></li>
+            <li><a href="javascript:void(0)" class="join">Sign In</a></li>
+        </ul>
+    </nav>
+
+    <div class="inner">
+        <p style="margin-top: 120px;">언제, 어디서나 효율적인 비즈니스 협업이 가능한</p>
+        <p>원격 현장 커뮤니케이션 플랫폼</p>
+        
+        <h1 style="margin-top: 40px; font-size: 5rem;">T2V Meetup</h1>
+        <p style="color: #7A9BEF; font-weight: 500; font-size: 1.8rem;">다양한 원격 업부 협업 서비스 패키지</p>
+        <img src="../images/meetup1.png" alt="다양한 원격 업부 협업 서비스 패키지" style="margin: 40px auto; width: 60%;">
+        
+        <h2 style="margin-top: 80px; color: #223B67;">원격 현장 커뮤니케이션 시스템이란?</h2>
+        <p style="color: #223B67;">테블릿을 사용하여 현장 담당자와 사내 외 담당자 현장 상황을 모니터링하는 기능 지원</p>
+        <img src="../images/meetup2.png" alt="원격 현장 커뮤니케이션 시스템" style="width: 70%;"> 
+        
+        <h1 style="margin-top: 100px; color: #223B67;">T2V Meetup을 활용한 현장 상황 관제 및 커뮤니케이션</h1>
+        <img src="../images/meetup3.png" alt="현장 상황 관제 및 커뮤니케이션" style="margin: 30px auto; width: 70%;">
+        
+        <h1 style="margin-top: 90px;">메타버스 형 현장 교육</h1>
+        <p style="margin-top: 30px;">3D 컨텐츠 기반의 가상공간상에서 작업장의 현황을 모니터링하고, 현장 담당자와 음성 교육</p>
+        <img src="../images/meetup4.png" alt="메타버스 형 현장 교육">
+        
+        <h1 style="margin-top: 120px;">작업장 설비 관제 및 원격 업무 협업</h1>
+        <p style="margin-top: 30px;">테블릿으로 작업장의 설비를 관제하면서</p>
+        <p style="margin-top: -5px;">작업장 담당자와 외부 담당자가 화상통화로 업무 협업</p>
+        <img src="../images/meetup5.png" alt="작업장 설비 관제 및 원격 업무 협업">
+        
+        <h1 style="margin-top: 120px;">무인 매장 상담</h1>
+        <p style="margin-top: 30px;">무인매장, 스터디 카페, 회사 로비에 비치된 테블릿으로</p>
+        <p style="margin-top: -5px;">담당 매니저와 손님(방문객)이 원격 화상 상담</p>
+        <img src="../images/meetup6.png" alt="무인 매장 상담">
+
+        <h1 style="margin-top: 120px;">화상 회의</h1>
+        <p>현장의 작업자와 오피스 직원이 화상회의, 화면공유, 자료 공유, 챗팅, 판서 회의 기능 제공</p>
+        <img src="../images/meetup7.png" alt="화상 회의">
+
+        <h1 style="margin-top: 120px;">에디터</h1>
+        <p>현장의 문제점을 운영지표로 관리하기 위한 화면내용을 작성할 수 있는 화면 구성 에디터</p>
+        <img src="../images/meetup8.png" alt="에디터" style="margin-bottom: 200px;">
+
+        <div class="content-box-1">
+            <p><span style="color: #92D050">AIoT 융합 기술</span>을 활용하여</p>
+            <p>기업의 문제를 해결하고 경쟁력을 향상시키는</p>
+        </div>
+        <div class="content-box-2">
+            <p>디지털 트랜스포메이션 전문기업</p>
+            <p>아이디비(주)</p>
+        </div>
+        <div class="content-box-3">
+            <p> ☎️ </p>
+            <p>도입상담</p>
+            <p>070-4388-7030</p>
+            <p>bkmin@idb.ai</p>
+            <p>상담시간 09:00 ~ 18:00</p>
+        </div>
+
+        <!-- scroll top -->
+        <div id="to-top">
+            <div class="material-icons">arrow_upward</div>
+        </div>
+    </div>
+    
+    <script src="../js/meetUp.js"></script>
+</body>
+
+</html>
