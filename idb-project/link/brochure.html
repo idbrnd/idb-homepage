@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>brochure</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .logo {
+            display: block;
+            width: 150px;
+            height: 60px;
+            margin: 20px auto;
+        }
+
+        .idb-bg {
+            width: 20%;
+            height: 120px;
+            margin: 5px auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #48c6ef 0%, #6f86d6 100%);
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            width: 100%;
+            text-align: center;
+            /* color: #333; */
+            color: #24445b;
+            animation: move 2s infinite;
+        }
+
+        a {
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all .4s;
+        }
+
+        a:hover {
+            background: #fff;
+            color: #24445b;
+        }
+
+        /* mediaquery */
+        @media screen and (max-width: 950px) {
+            .idb-bg {
+                width: 30%;
+            }
+        }
+
+        @media screen and (max-width: 610px) {
+            .idb-bg {
+                font-size: 14px;
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 330px) {
+            .idb-bg {
+                font-size: 12px;
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 270px) {
+            a {
+                font-size: 14px;
+                width: 60%;
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <img class="logo" src="../images/Logo_IDB1 WH.png" alt="IDB">
+    <div class="idb-bg">
+        <h3 class="text">수동으로 다운로드 하기</h3>
+        <a href="../docs/IDB_브로슈어_v1.6_230417_A4출력.pdf" download="IDB_브로슈어">downLoad</a>
+    </div>
+
+
+    <script defer>
+        window.onload = (() => {
+            const downLoadEl = document.querySelector('a');
+            console.log(downLoadEl)
+            downLoadEl.click();
+        })
+    </script>
+</body>
+
+</html>
