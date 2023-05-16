@@ -3,12 +3,11 @@
 //     // downLoadEl.click();
 // })
 let userData = {
-    email: '',
-    name: '',
-    company: '',
-    tel: ''
-}
-
+    email: "",
+    name: "",
+    company: "",
+    tel: "",
+};
 
 //^ email 검증
 const emailEl = document.querySelector("#email");
@@ -19,12 +18,12 @@ const validateEmail = (event) => {
         /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const emailValue = event.target.value;
-    userData.email = emailValue
     const isValidEmail = pattern.test(emailValue);
-
+    
     const noticeEmail = document.querySelector(".email-notice");
     if (isValidEmail) {
         // 유효한 이메일
+        userData.email = emailValue;
         emailEl.classList.add("valid");
         emailEl.classList.remove("invalid");
         noticeEmail.style.display = "none";
@@ -37,21 +36,20 @@ const validateEmail = (event) => {
 };
 emailEl.addEventListener("blur", validateEmail);
 
-
 //^ 이름 검증
 const nameEl = document.querySelector("#name");
 
-const validateName = event => {
+const validateName = (event) => {
     // 이름 정규식 패턴
     const pattern = /^[a-zA-Z가-힣]{2,5}$/;
     const nameValue = event.target.value;
-    userData.name = nameValue;
     // 이름과 패턴을 비교하여 유효성을 검사
     const isValidName = pattern.test(nameValue);
-
+    
     const noticeName = document.querySelector(".name-notice");
     if (isValidName) {
         // 유효한 이름
+        userData.name = nameValue;
         nameEl.classList.add("valid");
         nameEl.classList.remove("invalid");
         noticeName.style.display = "none";
@@ -61,25 +59,23 @@ const validateName = event => {
         nameEl.classList.add("invalid");
         noticeName.style.display = "block";
     }
-
 };
 nameEl.addEventListener("blur", validateName);
-
 
 //^ 회사명 검증
 const companyEl = document.querySelector("#company");
 
-const validateCompany = event => {
+const validateCompany = (event) => {
     // 회사명 정규식 패턴
     const pattern = /^[a-zA-Z가-힣]+$/;
     const companyValue = event.target.value;
-    userData.company = companyValue;
     // 회사명과 패턴을 비교하여 유효성을 검사
     const isValidCompany = pattern.test(companyValue);
-
+    
     const noticeCompany = document.querySelector(".company-notice");
     if (isValidCompany) {
         // 유효한 회사명
+        userData.company = companyValue;
         companyEl.classList.add("valid");
         companyEl.classList.remove("invalid");
         noticeCompany.style.display = "none";
@@ -89,25 +85,22 @@ const validateCompany = event => {
         companyEl.classList.add("invalid");
         noticeCompany.style.display = "block";
     }
-
 };
 companyEl.addEventListener("blur", validateCompany);
-
 
 //^ 전화번호 검증
 const telEl = document.querySelector("#tel");
 
-const validateTel = event => {
-    // 전화번호 정규식 패턴
-    const pattern = /^\d{2,3}\d{3,4}\d{4}$/;
-    const telValue = event.target.value;
-    userData.tel = telValue;
+const validateTel = (event) => {
+    const pattern = /^\d{2,3}-\d{3,4}-\d{4}$/;
+    const telValue = event.target.value;    
     // 전화번호와 패턴을 비교하여 유효성을 검사
     const isValidTel = pattern.test(telValue);
 
     const noticeTel = document.querySelector(".tel-notice");
     if (isValidTel) {
         // 유효한 전화번호
+        userData.tel = telValue;
         telEl.classList.add("valid");
         telEl.classList.remove("invalid");
         noticeTel.style.display = "none";
@@ -117,13 +110,16 @@ const validateTel = event => {
         telEl.classList.add("invalid");
         noticeTel.style.display = "block";
     }
-
 };
+
 telEl.addEventListener("blur", validateTel);
 
-// $(document).on("keyup", ".phoneNumber", function() { 
-// 	$(this).val( $(this).val().replace(/[^0-9]/g, "").replace(/(^02|^0505|^1[0-9]{3}|^0[0-9]{2})([0-9]+)?([0-9]{4})$/,"$1-$2-$3").replace("--", "-") );
-// });
+const autoHyphen = (event) => {
+    event.target.value = event.target.value.replace(/[^0-9]/g, '').replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+};
+
+telEl.addEventListener('input', autoHyphen);
+
 
 
 //* 등록버튼 클릭시
@@ -132,26 +128,21 @@ downLoadBtn.addEventListener("click", postInfo);
 
 function postInfo(event) {
     event.preventDefault();
-    console.log(userData)
+    console.log(userData);
 
     // post 요청하고 응답받을때 status 200이면 모달창 띄우기 및 input 초기화
-    
-    const modalEl = document.querySelector('.black-background');
-    modalEl.classList.add('show');
+
+    const modalEl = document.querySelector(".black-background");
+    modalEl.classList.add("show");
 }
 
-
-
 //* modal close
-const modalCloseBtn = document.querySelector('#modalCloseBtn');
+const modalCloseBtn = document.querySelector("#modalCloseBtn");
 
-modalCloseBtn.addEventListener('click', () => {
-    const modalEl = document.querySelector('.black-background');
-    modalEl.classList.remove('show');
-})
-
-
-
+modalCloseBtn.addEventListener("click", () => {
+    const modalEl = document.querySelector(".black-background");
+    modalEl.classList.remove("show");
+});
 
 // const iosInfoEl = document.querySelector('#iosDownLoadInfo');
 // const infoEl = document.querySelector('#info');
