@@ -227,7 +227,7 @@ const app = () => {
         // console.log(companyPatternValid());
         // console.log(telPatternValid());
 
-        const URL = "http://idb.ai:3000/brochure";
+        const URL = "https://idb.ai:3000/brochure";
         const emailNotice = document.querySelector(".email-notice");
         const nameNotice = document.querySelector(".name-notice");
 
