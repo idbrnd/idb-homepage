@@ -86,7 +86,6 @@ const app = () => {
             email2El.value = selectValue;
             email2El.disabled = true; // 비활성화
             userData.email = emailEl.value + email2El.value;
-            emailPatternValid();
         }
     }
 

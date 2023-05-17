@@ -19,7 +19,7 @@
             </div>
             <div class="content">
                 <h1>등록 완료!</h1>
-                <p class="brochure-info-text">브로셔 다운로드하기 </p>
+                <p class="brochure-info-text">브로슈어 다운로드하기 </p>
                 <p class="down-arrow"><span>👇</span></p>
                 <a href="../docs/IDB_brochure.pdf" class="download-btn" download="IDB_brochure"
                     target="_self">DownLoad</a>
@@ -40,8 +40,8 @@
                 <div class="user-box">
                     <label class="user-box-label">이메일<span style="color: red;">＊</span></label>
                     <div class="email-input-box">
-                        <input id="email" type="email" name="" required="" class="user-box-input email-input" />
-                        <input id="email2" type="email" name="" required="" class="user-box-input email-input" value="@"/>
+                        <input id="email" type="email" name="" required="" class="user-box-input email-input" autocomplete="off"/>
+                        <input id="email2" type="email" name="" required="" class="user-box-input email-input" value="@" autocomplete="off"/>
                         <select name="" id="emailSelect" class="user-box-select">
                             <option value="" selected>직접입력</option>
                             <option value="@naver.com">naver.com</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="user-box">
                     <label class="user-box-label">연락처</label>
-                    <input id="tel" type="text" maxlength="15" name="" required="" class="user-box-input"
+                    <input id="tel" type="tel" maxlength="15" name="" required="" class="user-box-input"
                         placeholder=" '-' 을 제외하고 입력해주세요." />
                     <p class="notice tel-notice">연락처가 올바르지 않습니다.</p>
                 </div>

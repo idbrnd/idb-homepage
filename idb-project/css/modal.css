@@ -96,6 +96,18 @@
     background-color: #0276aa;
 }
 
+@media screen and (max-width: 330px) {
+    .download-btn {
+        font-size: 14px;
+        width: auto;
+    }
+    .white-background {
+        width: 90%;
+        max-width: 250px;
+    }
+}
+
+
 @keyframes scale {
     0% {
         transform: scale(0.8);
