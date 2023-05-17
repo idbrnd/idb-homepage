@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* overflow: hidden; */
+    /* overflow: scroll; */
 }
 
 /* logo */
@@ -15,7 +15,7 @@ body {
 
 /* 배경을 갖는 전체 틀 */
 .info-input-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     overflow: hidden;
     background: linear-gradient(90deg, #48c6ef 0%, #6f86d6 100%);
@@ -32,7 +32,7 @@ body {
 .info-input-box {
     width: 100%;
     max-width: 550px;
-    height: 100%;
+    height: 80%;
     max-height: 650px;
     position: absolute;
     top: 0;
@@ -45,15 +45,20 @@ body {
     color: #333;
     border: none;
     border-radius: 10px;
-    overflow: scroll;
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+    overflow: scroll;
+
+    -ms-overflow-style: none; /* 인터넷 익스플로러 */
+    scrollbar-width: none; /* 파이어폭스 */
+}
+.info-input-box::-webkit-scrollbar {
+    display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 .info-input-box h2 {
     font-size: 24px;
     margin: 1px auto;
     font-weight: 800;
 }
-
 
 /* input box의 form*/
 .form {
@@ -65,7 +70,7 @@ body {
 .user-box {
     width: 90%;
     display: block;
-    margin: 30px auto;
+    margin: 20px auto;
     text-align: left;
 }
 .user-box:first-child {
@@ -84,12 +89,11 @@ body {
     padding: 10px 5px;
     width: 100%;
     display: block;
-    box-sizing : border-box;
+    box-sizing: border-box;
     margin: 10px auto;
 }
 .email-input-box {
     display: flex;
-    
 }
 .user-box-select {
     border: 2px solid #eee;
@@ -97,32 +101,30 @@ body {
     background-color: #fafafa;
     padding: 10px 5px;
     display: block;
-    box-sizing : border-box;
+    box-sizing: border-box;
     margin: 10px auto;
     width: 70%;
 }
 .email-input {
     width: 70%;
-
 }
 
 .notice {
     width: 100%;
     display: none;
-    margin: 10px auto;
+    margin: 0 auto 30px;
     font-size: 14px;
     color: red;
     text-align: left;
 }
 .invalid {
     /* border-color: red; */
-    outline: none;  
+    outline: none;
 }
 .valid {
     border: 1px solid #68abfe;
-    outline: none;  
+    outline: none;
 }
-
 
 .register-btn {
     display: inline-block;
@@ -134,7 +136,7 @@ body {
     margin: 30px auto 10px;
     color: #fff;
     cursor: pointer;
-    transition: .5s;
+    transition: 0.5s;
     border: none;
     border-radius: 4px;
     background: #0298db;
@@ -143,7 +145,6 @@ body {
 .register-btn:hover {
     background-color: #0276aa;
 }
-
 
 /* .downLoad-wrap {
     width: 30%;
@@ -172,7 +173,6 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
-
 /* ios 다운로드 방법 알아보기 */
 /* .ios-usher {
     display: flex;
@@ -189,9 +189,9 @@ body {
 }
 .ios-usher:hover {
     color: #fff;
-} */
+}
 
-/* .iosDownLoad-info-wrap {
+.iosDownLoad-info-wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -217,12 +217,94 @@ body {
     color: #fff;
     font-size: 20px;
     margin: 10px 0;
-} */
+}
 
-/* .show {
+.show {
     height: 2000px;
 } */
 
+/*! 스크롤 모양 css */
+/** 전체 div **/
+.scroll {
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 10px 10px 40px;
+    z-index: 3;
+}
+/** 마우스모양 테두리 부분 **/
+.scroll::before {
+    display: block;
+    width: 22px; /* 좌우폭 */
+    height: 38px; /* 높이 */
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 2px solid white;
+    border-radius: 12px;
+    content: "";
+}
+
+/** 마우스 모양 가운데서 내려가는 부분(애니메이션) **/
+.scroll::after {
+    display: block;
+    width: 2px;
+    height: 8px;
+    position: absolute;
+    top: 9px;
+    left: 24px;
+    background: white;
+    border-radius: 1px;
+    content: "";
+    animation-name: scroll;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+.scroll > p {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* text-align: center; */
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+        height: 8px;
+    }
+    20% {
+        opacity: 1;
+        height: 8px;
+    }
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+        height: 19px;
+    }
+    40% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(19px);
+        opacity: 0;
+        height: 0;
+    }
+    81% {
+        transform: translateY(0);
+        opacity: 0;
+        height: 8px;
+    }
+    100% {
+        opacity: 1;
+        height: 8px;
+    }
+}
 
 /* media query */
 @media screen and (max-width: 670px) {
@@ -276,4 +358,3 @@ body {
         transform: translateY(0);
     }
 }
-
