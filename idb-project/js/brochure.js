@@ -51,12 +51,12 @@ const app = () => {
         emailEl.value = removedText;
 
         // email2 input의 값이 공백이 아닌 경우 글자 합치기
-        if (email2El.value !== "") {
+        if (email2El.value !== "@") {
             mergedText = emailEl.value + email2El.value;
             userData.email = mergedText;
+            emailPatternValid();
         }
 
-        // emailPatternValid();
     };
     
 
@@ -85,6 +85,7 @@ const app = () => {
         } else {
             email2El.value = selectValue;
             email2El.disabled = true; // 비활성화
+            mergedText = emailEl.value + email2El.value;
             userData.email = emailEl.value + email2El.value;
         }
     }
@@ -272,10 +273,11 @@ const app = () => {
     //* modal close
     const modalCloseBtn = document.querySelector("#modalCloseBtn");
 
-    modalCloseBtn.addEventListener("click", () => {
+    const closeModal = () => {  
         const modalEl = document.querySelector(".black-background");
         modalEl.classList.remove("show");
-    });
+    }
+    modalCloseBtn.addEventListener("click", closeModal);
 
 };  // app() end
 
