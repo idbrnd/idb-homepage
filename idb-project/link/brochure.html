@@ -21,12 +21,13 @@
                 <h1>등록 완료!</h1>
                 <p class="brochure-info-text">브로셔 다운로드하기 </p>
                 <p class="down-arrow"><span>👇</span></p>
-                <a href="../docs/IDB_brochure.pdf" class="download-btn" download="IDB_brochure" target="_self">DownLoad</a>
+                <a href="../docs/IDB_brochure.pdf" class="download-btn" download="IDB_brochure"
+                    target="_self">DownLoad</a>
             </div>
         </div>
     </div>
 
-    
+
 
     <!-- 정보 입력 section -->
     <section class="info-input-container">
@@ -38,12 +39,24 @@
             <form class="form" action="" method="">
                 <div class="user-box">
                     <label class="user-box-label">이메일<span style="color: red;">＊</span></label>
-                    <input id="email" type="email" name="" required="" class="user-box-input"/>
+                    <div class="email-input-box">
+                        <input id="email" type="email" name="" required="" class="user-box-input email-input" />
+                        <input id="email2" type="email" name="" required="" class="user-box-input email-input" value="@"/>
+                        <select name="" id="emailSelect" class="user-box-select">
+                            <option value="" selected>직접입력</option>
+                            <option value="@naver.com">naver.com</option>
+                            <option value="@gmail.com">gmail.com</option>
+                            <option value="@kakao.com">kakao.com</option>
+                            <option value="@hanmail.net">hanmail.net</option>
+                            <option value="@nate.com">nate.com</option>
+                            <option value="@yahoo.co.kr">yahoo.co.kr</option>
+                        </select>
+                    </div>
                     <p class="notice email-notice">이메일 형식이 올바르지 않습니다.</p>
                 </div>
                 <div class="user-box">
                     <label class="user-box-label">이름<span style="color: red;">＊</span></label>
-                    <input id="name" type="text" name="" required="" class="user-box-input"/>
+                    <input id="name" type="text" name="" required="" class="user-box-input" />
                     <p class="notice name-notice">이름이 올바르지 않습니다.</p>
                 </div>
                 <div class="user-box">
@@ -53,10 +66,11 @@
                 </div>
                 <div class="user-box">
                     <label class="user-box-label">연락처</label>
-                    <input id="tel" type="text" maxlength="15" name="" required="" class="user-box-input" placeholder=" '-' 을 제외하고 입력해주세요."/>
-                    <p class="notice tel-notice">연락처의 형식이 올바르지 않습니다.</p>
+                    <input id="tel" type="text" maxlength="15" name="" required="" class="user-box-input"
+                        placeholder=" '-' 을 제외하고 입력해주세요." />
+                    <p class="notice tel-notice">연락처가 올바르지 않습니다.</p>
                 </div>
-                <button type="submit" class="register-btn" id="downLoadBtn">등록하기</button>
+                <button type="submit" class="register-btn" id="registerBtn">등록하기</button>
             </form>
         </div>
     </section>
