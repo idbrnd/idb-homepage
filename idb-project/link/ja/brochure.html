@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/brochure.css">
+    <title>brochure</title>
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="black-background">
+        <div class="white-background">
+            <div class="btn-wrap">
+                <button class="close-btn" id="modalCloseBtn"> X </button>
+            </div>
+            <div class="content">
+                <h1>登録完了！</h1>
+                <p class="brochure-info-text">ブローシュアをダウンロード </p>
+                <p class="down-arrow"><span>👇</span></p>
+                <a href="../../docs/IDB_brochure.pdf" class="download-btn" download="IDB_brochure"
+                    target="_self">DownLoad</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 情報入力セクション -->
+    <section class="info-input-container">
+        <div class="info-input-box">
+            <div class="info-box-wrap">
+                <img class="logo" src="../../images/idb-logo.png" alt="IDB">
+                <h2 class="info-msg"><span>情報を入力してください！</span></h2>
+            </div>
+            <form class="form" action="" method="">
+                <div class="user-box">
+                    <label class="user-box-label">メールアドレス<span style="color: red;"> * </span></label>
+                    <div class="email-input-box">
+                        <input id="email" type="email" name="" required="" class="user-box-input email-input"
+                            autocomplete="off" />
+                        <span>@</span>
+                        <input id="email2" type="email" name="" required="" class="user-box-input email-input" value=""
+                            autocomplete="off" />
+                        <select name="" id="emailSelect" class="user-box-select">
+                            <option value="" selected>直接入力</option>
+                            <option value="@naver.com">naver.com</option>
+                            <option value="@gmail.com">gmail.com</option>
+                            <option value="@kakao.com">kakao.com</option>
+                            <option value="@hanmail.net">hanmail.net</option>
+                            <option value="@nate.com">nate.com</option>
+                            <option value="@yahoo.co.kr">yahoo.co.kr</option>
+                        </select>
+                    </div>
+                    <p class="notice email-notice">メール形式が正しくありません。</p>
+                </div>
+                <div class="user-box">
+                    <label class="user-box-label">名前<span style="color: red;"> * </span></label>
+                    <input id="name" type="text" name="" required="" class="user-box-input" />
+                    <p class="notice name-notice">名前が正しくありません。</p>
+                </div>
+                <div class="user-box">
+                    <label class="user-box-label">会社名</label>
+                    <input id="company" type="text" name="" required="" class="user-box-input" />
+                    <p class="notice company-notice">会社名が正しくありません。</p>
+                </div>
+                <div class="user-box">
+                    <label class="user-box-label">連絡先</label>
+                    <input id="tel" type="tel" maxlength="13" name="" required="" class="user-box-input"
+                        placeholder=" '-' を除いて入力してください。" />
+                    <p class="notice tel-notice">連絡先が正しくありません。</p>
+                </div>
+                <button type="submit" class="register-btn" id="registerBtn">登録する</button>
+            </form>
+        </div>
+    </section>
+    <!-- <div class="scroll">
+        <p>Scroll</p>
+    </div> -->
+
+
+
+
+
+
+    <!-- <h2 id="iosDownLoadInfo" class="ios-usher">IOS ダウンロード方法を知る <span id="upDownArrow">👇</span></h2>
+    <div class="iosDownLoad-info-wrap" id="info">
+        <p class="text-info">⒈ Safari ブラウザの下中央ボタンを押してください。</p>
+        <img src="../images/down_1.png" alt="download_1">
+        <p class="text-info" style="margin-top: 100px;">⒉ 下の「ファイルに保存」ボタンを押してください。</p>
+        <img src="../images/down_2.png" alt="download_2">
+        <p class="text-info" style="margin-top: 60px;">⒊ ファイルが保存されます！</p>
+    </div> -->
+
+    <script defer src="../../js/ja/brochure.js"></script>
+</body>
+
+</html>

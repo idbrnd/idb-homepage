@@ -1,149 +1,151 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* overflow: scroll; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: scroll; */
 }
 
 /* logo */
 .logo {
-    display: block;
-    width: 90px;
-    height: 60px;
-    margin: 20px auto;
+  display: block;
+  width: 90px;
+  height: 60px;
+  margin: 20px auto;
 }
 
 /* 배경을 갖는 전체 틀 */
 .info-input-container {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    background: linear-gradient(90deg, #48c6ef 0%, #6f86d6 100%);
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-    text-align: center;
-    position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(90deg, #48c6ef 0%, #6f86d6 100%);
+  /* background-color: #333; */
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  position: relative;
 }
 
 /* 배경 안의 박스 */
 .info-input-box {
-    width: 100%;
-    max-width: 550px;
-    height: 80%;
-    max-height: 650px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: block;
-    margin: auto;
-    background: #fff;
-    color: #333;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
-    overflow: scroll;
+  width: 100%;
+  max-width: 550px;
+  height: 80%;
+  max-height: 650px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: auto;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  overflow: scroll;
 
-    -ms-overflow-style: none; /* 인터넷 익스플로러 */
-    scrollbar-width: none; /* 파이어폭스 */
+  -ms-overflow-style: none; /* 인터넷 익스플로러 */
+  scrollbar-width: none; /* 파이어폭스 */
 }
 .info-input-box::-webkit-scrollbar {
-    display: none; /* 크롬, 사파리, 오페라, 엣지 */
+  display: none; /* 크롬, 사파리, 오페라, 엣지 */
 }
 .info-input-box h2 {
-    font-size: 24px;
-    margin: 1px auto;
-    font-weight: 800;
+  font-size: 24px;
+  margin: 1px auto;
+  font-weight: 800;
 }
 
 /* input box의 form*/
 .form {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 .user-box {
-    width: 90%;
-    display: block;
-    margin: 20px auto;
-    text-align: left;
+  width: 90%;
+  display: block;
+  margin: 20px auto;
+  text-align: left;
 }
 .user-box:first-child {
-    margin-top: -10px;
+  margin-top: -10px;
 }
 
 .user-box-label {
-    width: 100%;
-    display: block;
-    margin: 20px auto 10px;
+  width: 100%;
+  display: block;
+  margin: 20px auto 10px;
 }
 .user-box-input {
-    border: 2px solid #eee;
-    border-radius: 5px;
-    background-color: #fafafa;
-    padding: 10px 5px;
-    width: 100%;
-    display: block;
-    box-sizing: border-box;
-    margin: 10px auto;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  background-color: #fafafa;
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  margin: 10px auto;
 }
 .email-input-box {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
 .user-box-select {
-    border: 2px solid #eee;
-    border-radius: 5px;
-    background-color: #fafafa;
-    padding: 10px 5px;
-    display: block;
-    box-sizing: border-box;
-    margin: 10px auto;
-    width: 70%;
+  border: 2px solid #eee;
+  border-radius: 5px;
+  background-color: #fafafa;
+  padding: 10px 5px;
+  display: block;
+  box-sizing: border-box;
+  margin: 10px auto;
+  width: 70%;
 }
 .email-input {
-    width: 70%;
+  width: 70%;
 }
 
 .notice {
-    width: 100%;
-    display: none;
-    margin: 0 auto 30px;
-    font-size: 14px;
-    color: red;
-    text-align: left;
+  width: 100%;
+  display: none;
+  margin: 0 auto 30px;
+  font-size: 14px;
+  color: red;
+  text-align: left;
 }
 .invalid {
-    /* border-color: red; */
-    outline: none;
+  /* border-color: red; */
+  outline: none;
 }
 .valid {
-    border: 1px solid #68abfe;
-    outline: none;
+  border: 1px solid #68abfe;
+  outline: none;
 }
 
 .register-btn {
-    display: inline-block;
-    width: 30%;
-    padding: 10px 15px;
-    font-size: 20px;
-    text-decoration: none;
-    letter-spacing: 3px;
-    margin: 30px auto 10px;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.5s;
-    border: none;
-    border-radius: 4px;
-    background: #0298db;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+  width: 30%;
+  padding: 10px 15px;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  margin: 30px auto 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+  border: none;
+  border-radius: 4px;
+  background: #0298db;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
 .register-btn:hover {
-    background-color: #0276aa;
+  background-color: #0276aa;
 }
 
 /* .downLoad-wrap {
@@ -162,15 +164,15 @@ body {
 } */
 
 .info-msg {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    /* animation: move 2s infinite; */
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  /* animation: move 2s infinite; */
 }
 .info-msg span {
-    background: linear-gradient(180deg, #48c6ef 0%, #6f86d6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(180deg, #48c6ef 0%, #6f86d6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* ios 다운로드 방법 알아보기 */
@@ -226,135 +228,135 @@ body {
 /*! 스크롤 모양 css */
 /** 전체 div **/
 .scroll {
-    height: 60px;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 16px;
-    color: white;
-    text-decoration: none;
-    padding: 10px 10px 10px 40px;
-    z-index: 3;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  padding: 10px 10px 10px 40px;
+  z-index: 3;
 }
 /** 마우스모양 테두리 부분 **/
 .scroll::before {
-    display: block;
-    width: 22px; /* 좌우폭 */
-    height: 38px; /* 높이 */
-    position: absolute;
-    top: -2px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 2px solid white;
-    border-radius: 12px;
-    content: "";
+  display: block;
+  width: 22px; /* 좌우폭 */
+  height: 38px; /* 높이 */
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid white;
+  border-radius: 12px;
+  content: "";
 }
 
 /** 마우스 모양 가운데서 내려가는 부분(애니메이션) **/
 .scroll::after {
-    display: block;
-    width: 2px;
-    height: 8px;
-    position: absolute;
-    top: 9px;
-    left: 24px;
-    background: white;
-    border-radius: 1px;
-    content: "";
-    animation-name: scroll;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+  display: block;
+  width: 2px;
+  height: 8px;
+  position: absolute;
+  top: 9px;
+  left: 24px;
+  background: white;
+  border-radius: 1px;
+  content: "";
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 .scroll > p {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    /* text-align: center; */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  /* text-align: center; */
 }
 @keyframes scroll {
-    0% {
-        opacity: 1;
-        height: 8px;
-    }
-    20% {
-        opacity: 1;
-        height: 8px;
-    }
-    30% {
-        transform: translateY(0);
-        opacity: 1;
-        height: 19px;
-    }
-    40% {
-        opacity: 1;
-    }
-    80% {
-        transform: translateY(19px);
-        opacity: 0;
-        height: 0;
-    }
-    81% {
-        transform: translateY(0);
-        opacity: 0;
-        height: 8px;
-    }
-    100% {
-        opacity: 1;
-        height: 8px;
-    }
+  0% {
+    opacity: 1;
+    height: 8px;
+  }
+  20% {
+    opacity: 1;
+    height: 8px;
+  }
+  30% {
+    transform: translateY(0);
+    opacity: 1;
+    height: 19px;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(19px);
+    opacity: 0;
+    height: 0;
+  }
+  81% {
+    transform: translateY(0);
+    opacity: 0;
+    height: 8px;
+  }
+  100% {
+    opacity: 1;
+    height: 8px;
+  }
 }
 
 /* media query */
 @media screen and (max-width: 670px) {
-    .info-input-box {
-        width: 90%;
-    }
-    .register-btn {
-        font-size: 18px;
-    }
+  .info-input-box {
+    width: 90%;
+  }
+  .register-btn {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 420px) {
-    .logo {
-        width: 60px;
-        height: 40px;
-    }
-    .info-input-box h2 {
-        font-size: 20px;
-    }
-    .user-box-label {
-        font-size: 14px;
-    }
-    .register-btn {
-        width: 35%;
-        font-size: 16px;
-    }
+  .logo {
+    width: 60px;
+    height: 40px;
+  }
+  .info-input-box h2 {
+    font-size: 20px;
+  }
+  .user-box-label {
+    font-size: 14px;
+  }
+  .register-btn {
+    width: 35%;
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 310px) {
-    .register-btn {
-        width: 40%;
-        font-size: 14px;
-    }
+  .register-btn {
+    width: 40%;
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 260px) {
-    .register-btn {
-        width: 45%;
-        font-size: 12px;
-    }
+  .register-btn {
+    width: 45%;
+    font-size: 12px;
+  }
 }
 
 @keyframes move {
-    0% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translateY(0);
+  }
 
-    50% {
-        transform: translateY(-10px);
-    }
+  50% {
+    transform: translateY(-10px);
+  }
 
-    100% {
-        transform: translateY(0);
-    }
+  100% {
+    transform: translateY(0);
+  }
 }

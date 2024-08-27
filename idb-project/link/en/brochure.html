@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <link rel="stylesheet" href="../../css/modal.css">
+    <link rel="stylesheet" href="../../css/brochure.css">
+    <title>brochure</title>
+</head>
+
+<body>
+    <!-- modal -->
+    <div class="black-background">
+        <div class="white-background">
+            <div class="btn-wrap">
+                <button class="close-btn" id="modalCloseBtn"> X </button>
+            </div>
+            <div class="content">
+                <h1>complete!</h1>
+                <p class="brochure-info-text">Please download the brochure</p>
+                <p class="down-arrow"><span>👇</span></p>
+                <a href="../../docs/IDB_brochure_ko.pdf" class="download-btn" download="IDB_brochure"
+                    target="_self">DownLoad</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- 정보 입력 section -->
+    <section class="info-input-container">
+        <div class="info-input-box" style="max-height: 700px">
+            <div class="info-box-wrap">
+                <img class="logo" src="../../images/idb-logo.png" alt="IDB">
+                <h2 class="info-msg"><span>Please enter your information!</span></h2>
+            </div>
+            <form class="form" action="" method="">
+                <div style="margin-top: 40px; min-height: 120px;" class="user-box">
+                    <label class="user-box-label">Eamil<span style="color: red;">＊</span></label>
+                    <div class="email-input-box">
+                        <input id="email" type="email" name="" required="" class="user-box-input email-input"
+                            autocomplete="off" />
+                        <span>@</span>
+                        <input id="email2" type="email" name="" required="" class="user-box-input email-input" value=""
+                            autocomplete="off" />
+                        <select name="" id="emailSelect" class="user-box-select">
+                            <option value="" selected>Direct input</option>
+                            <option value="gmail.com">gmail.com</option>
+                        </select>
+                    </div>
+                    <p style="margin: 0;" class="notice email-notice">The email format is incorrect.</p>
+                </div>
+                <div style="display: flex; min-height: 125px;" class="user-box">
+                    <div style="width: 50%;">
+                        <label class="user-box-label">First Name<span style="color: red;">＊</span></label>
+                        <input id="firstName" type="text" name="" required="" class="user-box-input" />
+                        <p style="margin: 0;" class="notice firstName-notice">The first name is incorrect.</p>
+                    </div>
+                    <div style="width: 50%; margin-left: 10px;">
+                        <label class="user-box-label">Last Name<span style="color: red;">＊</span></label>
+                        <input id="lastName" type="text" name="" required="" class="user-box-input" />
+                        <p style="margin: 0;" class="notice lastName-notice">The last name is incorrect.</p>
+                    </div>
+                </div>
+                <div style="margin-top: 35px; min-height: 120px;" class="user-box">
+                    <label class="user-box-label">Company</label>
+                    <input id="company" type="text" name="" required="" class="user-box-input" />
+                    <p style="margin: 0;" class="notice company-notice">The company name is incorrect.</p>
+                </div>
+                <!-- <div class="user-box">
+                    <label class="user-box-label">Phone</label>
+                    <input id="tel" type="tel" maxlength="13" name="" required="" class="user-box-input"
+                        placeholder=" Please enter without '-'." />
+                    <p class="notice tel-notice">The mobile phone number is incorrect.</p>
+                </div> -->
+                <button style="margin-top: 0px;" type="submit" class="register-btn" id="registerBtn">Save</button>
+            </form>
+        </div>
+    </section>
+    <script defer src="../../js/en/brochure.js"></script>
+</body>
+
+</html>
