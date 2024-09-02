@@ -1,12 +1,15 @@
+// 일본어 버전
 let userData = {
   email: "",
-  name: "",
+  firstName: "",
+  lastName: "",
   company: "",
   tel: "",
 };
 
 let emailValue = "";
-let nameValue = "";
+let firstNameValue = "";
+let lastNameValue = "";
 let companyValue = "";
 let telValue = "";
 let mergedText = "";
@@ -14,19 +17,22 @@ let mergedText = "";
 const emailEl = document.querySelector("#email");
 const email2El = document.querySelector("#email2");
 const emailSelectEl = document.querySelector("#emailSelect");
-const nameEl = document.querySelector("#name");
+const firstNameEl = document.querySelector("#firstName");
+const lastNameEl = document.querySelector("#lastName");
 const companyEl = document.querySelector("#company");
-const telEl = document.querySelector("#tel");
+// const telEl = document.querySelector("#tel");
 
 const emailPattern =
-  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
-// const emailPattern = /^[^\sㄱ-ㅎㅏ-ㅣ가-힣]+@[^\sㄱ-ㅎㅏ-ㅣ가-힣]+\.[a-zA-Z]+$/;
-const namePattern = /^[a-zA-Z가-힣]{2,30}$/;
-const companyPattern = /^[a-zA-Z가-힣]+$/;
-const telPattern = /^\d{2,3}-\d{3,4}-\d{4}$/;
+  /^(([^<>()[\]\\.,;:\s@\"\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\uFF00-\uFFEF]+(\.[^<>()[\]\\.,;:\s@\"\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\uFF00-\uFFEF]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\uFF00-\uFFEF\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
+const namePattern =
+  /^[a-zA-Z가-힣\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF]{2,30}$/;
+const companyPattern =
+  /^(?=.*[a-zA-Z가-힣\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF-])[a-zA-Z가-힣\u3000-\u303F\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF-0-9]+$/;
+// const telPattern = /^\d{1,3}-\d{1,4}-\d{1,4}$/;
 
 const noticeEmail = document.querySelector(".email-notice");
-const noticeName = document.querySelector(".name-notice");
+const noticeFirstName = document.querySelector(".firstName-notice");
+const noticeLastName = document.querySelector(".lastName-notice");
 const noticeCompany = document.querySelector(".company-notice");
 const noticeTel = document.querySelector(".tel-notice");
 
@@ -81,7 +87,7 @@ const app = () => {
     }
   }
 
-  // 이메일 패턴 검증
+  //* 이메일 패턴 검증
   function emailPatternValid() {
     const isValidEmail = emailPattern.test(userData.email);
 
@@ -95,41 +101,68 @@ const app = () => {
       // 유효하지 않은 이메일
       emailEl.classList.remove("valid");
       emailEl.classList.add("invalid");
-      noticeEmail.textContent = "이메일 형식이 올바르지 않습니다.";
+      noticeEmail.textContent = "電子メールの形式が正しくありません。";
       noticeEmail.style.display = "block";
       return false;
     }
   }
 
-  //^ 이름 검증
-  nameEl.addEventListener("change", validateName);
+  //* 이름 검증 (이름, 성)
+  firstNameEl.addEventListener("change", validateFirstName);
+  lastNameEl.addEventListener("change", validateLastName);
 
-  function validateName(event) {
-    nameValue = event.target.value;
-    userData.name = nameValue;
-    namePatternValid();
+  function validateFirstName(event) {
+    firstNameValue = event.target.value;
+    userData.firstName = firstNameValue;
+    firstNamePatternValid();
+  }
+  function validateLastName(event) {
+    lastNameValue = event.target.value;
+    userData.lastName = lastNameValue;
+    lastNamePatternValid();
   }
 
-  function namePatternValid() {
-    const isValidName = namePattern.test(userData.name);
+  //# 이름 검증
+  function firstNamePatternValid() {
+    const isValidName = namePattern.test(userData.firstName);
 
     if (isValidName) {
       // 유효한 이름
-      nameEl.classList.add("valid");
-      nameEl.classList.remove("invalid");
-      noticeName.style.display = "none";
+      firstNameEl.classList.add("valid");
+      firstNameEl.classList.remove("invalid");
+      noticeFirstName.style.display = "none";
       return true;
     } else {
       // 유효하지 않은 이름
-      nameEl.classList.remove("valid");
-      nameEl.classList.add("invalid");
-      noticeName.textContent = "이름의 형식이 올바르지 않습니다.";
-      noticeName.style.display = "block";
+      firstNameEl.classList.remove("valid");
+      lastNameEl.classList.add("invalid");
+      noticeFirstName.textContent = "名前の形式が正しくありません。";
+      noticeFirstName.style.display = "block";
       return false;
     }
   }
 
-  //^ 회사명 검증
+  //# 성 검증
+  function lastNamePatternValid() {
+    const isValidName = namePattern.test(userData.lastName);
+
+    if (isValidName) {
+      // 유효한 이름
+      lastNameEl.classList.add("valid");
+      lastNameEl.classList.remove("invalid");
+      noticeLastName.style.display = "none";
+      return true;
+    } else {
+      // 유효하지 않은 이름
+      lastNameEl.classList.remove("valid");
+      lastNameEl.classList.add("invalid");
+      noticeLastName.textContent = "名前の形式が正しくありません。";
+      noticeLastName.style.display = "block";
+      return false;
+    }
+  }
+
+  //* 회사명 검증
   companyEl.addEventListener("change", validateCompany);
 
   function validateCompany(event) {
@@ -154,49 +187,11 @@ const app = () => {
       // 유효하지 않은 회사명
       companyEl.classList.remove("valid");
       companyEl.classList.add("invalid");
-      noticeCompany.textContent = "회사명이 올바르지 않습니다.";
+      noticeCompany.textContent = "正しい会社名を入力してください。";
       noticeCompany.style.display = "block";
       return false;
     }
   }
-
-  //^ 전화번호 검증
-  telEl.addEventListener("change", validateTel);
-
-  function validateTel(event) {
-    telValue = event.target.value;
-    userData.tel = telValue;
-    telPatternValid();
-  }
-
-  function telPatternValid() {
-    const isValidTel = telPattern.test(telValue);
-
-    if (isValidTel) {
-      // 유효한 전화번호
-      telEl.classList.add("valid");
-      telEl.classList.remove("invalid");
-      noticeTel.style.display = "none";
-      return true;
-    } else if (userData.tel === "") {
-      noticeTel.style.display = "none";
-    } else {
-      // 유효하지 않은 전화번호
-      telEl.classList.remove("valid");
-      telEl.classList.add("invalid");
-      noticeTel.textContent = "연락처의 형식이 올바르지 않습니다.";
-      noticeTel.style.display = "block";
-      return false;
-    }
-  }
-
-  const autoHyphen = (event) => {
-    event.target.value = event.target.value
-      .replace(/[^0-9]/g, "")
-      .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3")
-      .replace(/(\-{1,2})$/g, "");
-  };
-  telEl.addEventListener("input", autoHyphen);
 
   //* 등록하기 버튼 클릭시
   const registerBtn = document.querySelector("#registerBtn");
@@ -213,33 +208,62 @@ const app = () => {
 
     const URL = "https://idb.ai:3000/brochure";
     const emailNotice = document.querySelector(".email-notice");
-    const nameNotice = document.querySelector(".name-notice");
+    const firstNameNotice = document.querySelector(".firstName-notice");
+    const lastNameNotice = document.querySelector(".lastName-notice");
 
     if (userData.email === "") {
-      emailNotice.textContent = "이메일은 필수 입력사항입니다.";
+      emailNotice.textContent = "メールアドレスは必須です。";
       emailNotice.style.display = "block";
       return;
-    } else if (userData.email !== mergedText) {
-      emailNotice.textContent = "이메일 형식을 확인해주세요.";
+    }
+    if (userData.email !== mergedText) {
+      emailNotice.textContent = "メールアドレスの形式を確認してください。";
       emailNotice.style.display = "block";
       return;
-    } else if (userData.name === "") {
-      nameNotice.textContent = "이름은 필수 입력사항입니다.";
-      nameNotice.style.display = "block";
+    }
+    if (userData.firstName === "") {
+      firstNameNotice.textContent = "名は必須です。";
+      firstNameNotice.style.display = "block";
       return;
-    } else if (userData.name !== nameValue) {
-      nameNotice.textContent = "이름 형식을 확인해주세요.";
-      nameNotice.style.display = "block";
+    }
+    if (userData.lastName === "") {
+      lastNameNotice.textContent = "姓は必須です。";
+      lastNameNotice.style.display = "block";
+      return;
     }
 
+    if (userData.firstName !== firstNameValue) {
+      firstNameNotice.textContent = "名の形式を確認してください。";
+      firstNameNotice.style.display = "block";
+      return;
+    }
+    if (userData.lastName !== lastNameValue) {
+      lastNameNotice.textContent = "姓の形式を確認してください。";
+      lastNameNotice.style.display = "block";
+      return;
+    }
+
+    //! 서버로 보낼 데이터
+    const USER_DATA = {
+      email: userData.email,
+      name: userData.firstName + " " + userData.lastName,
+      company: userData.company,
+      tel: "",
+    };
+    console.log(USER_DATA);
+
     // 이메일과 이름 검증 후 데이터 전송
-    if (emailPatternValid() !== false && namePatternValid() !== false) {
+    const completeValidate =
+      emailPatternValid() !== false &&
+      firstNamePatternValid() !== false &&
+      lastNamePatternValid() !== false;
+    if (completeValidate) {
       fetch(URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(userData),
+        body: JSON.stringify(USER_DATA),
       })
         .then((response) => response.json())
         .then((data) => {
@@ -264,26 +288,3 @@ const app = () => {
 }; // app() end
 
 app();
-
-// const iosInfoEl = document.querySelector('#iosDownLoadInfo');
-// const infoEl = document.querySelector('#info');
-// const upDownArrow = document.querySelector('#upDownArrow');
-// let isClicked = false;
-
-// iosInfoEl.addEventListener('click', () => {
-//     isClicked = !isClicked;
-//     if(isClicked) {
-//         // true면 숨김처리
-//         infoEl.classList.add('show');
-//         upDownArrow.textContent = '👆';
-//         iosInfoEl.style.cssText = 'border-radius: 10px 10px 0 0';
-//     } else {
-//         // false면 보임처리
-//         infoEl.classList.remove('show');
-//         upDownArrow.textContent = '👇';
-//         setTimeout(() => {
-//             iosInfoEl.style.cssText = 'border-radius: 10px';
-//         }, 250);
-//     }
-
-// })
